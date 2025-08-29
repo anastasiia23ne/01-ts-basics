@@ -7,10 +7,10 @@ interface Post {
 }
 
 async function fetchPosts() {
-    const responce = await axios.get<Post>(
+    const response = await axios.get<Post[]>(
         `<https://jsonplaceholder.typicode.com/posts>`
     );
-    return responce.data;
+    return response.data;
 }
 
 fetchPosts().then((posts) => {
